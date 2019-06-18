@@ -13,10 +13,12 @@ $(document).ready(function() {
       var dashboard = tableau.extensions.dashboardContent.dashboard;
 
       // Display the name of dashboard in the UI
+      console.log("Success! Your extension should be working.")
       $("#resultBox").html("I'm running in a dashboard named <strong>" + dashboard.name + "</strong>");
     }, function(err) {
 
       // something went wrong in initialization
+      console.log("Oops, something went wrong!")
       $("#resultBox").html("Error while Initializing: " + err.toString());
     });
   });
